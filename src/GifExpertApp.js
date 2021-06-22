@@ -8,13 +8,13 @@ const GifExpertApp = () => {
   return (
     <>
       <h2>GifExpertApp</h2>
-      <AddCategory/>
+      <AddCategory
+        setCategorias={setCategorias}
+      />
       <hr />
 
       <ol>
-        {
-          categorias.map(cat=><li key={cat}>{cat}</li>)
-        }
+        {categorias.map(cat=><li key={cat}>{cat}</li>)}
       </ol>
     </>
   );
