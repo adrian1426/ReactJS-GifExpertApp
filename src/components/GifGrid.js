@@ -1,6 +1,9 @@
-import {useEffect} from 'react';
+import {useEffect,useState} from 'react';
+import GifGridItem from './GifGridItem';
 
 const GifGrid = (props) => {
+  const [images,setImages]=useState([]);
+
   const {category}=props;
 
   const getGifs=async()=>{
@@ -17,6 +20,7 @@ const GifGrid = (props) => {
     });
 
     console.log(gifs);
+    setImages(gifs);
   };
 
   useEffect(()=>{
@@ -26,6 +30,14 @@ const GifGrid = (props) => {
   return (
     <div>
       <h3>{category}</h3>
+        {
+          images.map(img=>(
+            <GifGridItem
+              key={img.id}
+              {...img}
+            />
+          ))
+        }
     </div>
   );
 };
