@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect} from 'react';
 
 const GifGrid = (props) => {
   const {category}=props;
@@ -19,7 +19,9 @@ const GifGrid = (props) => {
     console.log(gifs);
   };
 
-  getGifs();
+  useEffect(()=>{
+    getGifs();
+  },[]);
 
   return (
     <div>
