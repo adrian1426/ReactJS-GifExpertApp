@@ -13,7 +13,7 @@ const AddCategory = (props) => {
     e.preventDefault();
     
     if(inputValue.trim().length>0){
-      setCategorias(categorias=>[...categorias,inputValue]);
+      setCategorias(categorias=>[inputValue,...categorias]);
       setInputValue('');
     }
   };
