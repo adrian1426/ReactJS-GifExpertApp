@@ -24,7 +24,7 @@ const AddCategory = (props) => {
         type='text'
         value={inputValue}
         onChange={handleInputValue}
-        placeholder='Ingresa cualquier texto ejemplo(guko,naruto,mxico,barcelona,etc..)'
+        placeholder='Ingresa cualquier texto ejemplo(guko,naruto,etc..) dar Enter'
       />
     </form>
   );
